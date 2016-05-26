@@ -4,6 +4,8 @@ MAINTAINER Asokani "https://github.com/asokani"
 RUN apt-get update && \
   apt-get -y install bind9
 
+RUN mkdir /etc/service/bind
+ADD bind.sh /etc/service/bind/run
 
 CMD ["/sbin/my_init"]
 

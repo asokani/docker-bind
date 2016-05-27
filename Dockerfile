@@ -2,7 +2,7 @@ FROM mainlxc/ubuntu
 MAINTAINER Asokani "https://github.com/asokani"
 
 RUN apt-get update && \
-  apt-get -y install bind9
+  apt-get -y install bind9 dnsutils
 
 RUN mkdir /etc/service/bind
 ADD bind.sh /etc/service/bind/run

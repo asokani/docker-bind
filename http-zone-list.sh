@@ -1,4 +1,5 @@
 #!/bin/bash
+echo
 for ZONE in `find /etc/bind/zones -type f -name "*.zone"`
 do
   DOMAIN=`echo $ZONE | rev | cut -d'/' -f1 | rev`
